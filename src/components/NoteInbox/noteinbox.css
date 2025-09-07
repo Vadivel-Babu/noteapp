@@ -1,0 +1,28 @@
+.noteinbox {
+  background-color: #001f8b;
+  padding: 20px;
+}
+.container {
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 9px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+  font-size: 29px;
+  font-weight: 400;
+  resize: none;
+  color: #9a9a9a;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+}
+.send__btn {
+  align-self: flex-end;
+}
