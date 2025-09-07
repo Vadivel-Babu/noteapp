@@ -1,0 +1,27 @@
+.titlecard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: antiquewhite;
+}
+.titlecard__profile {
+  width: 70px;
+  height: 70px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titlecard__name {
+  letter-spacing: 0.32px;
+}
+.titlecard.active {
+  background-color: rgba(47, 47, 47, 0.17);
+  border-radius: 16px;
+}

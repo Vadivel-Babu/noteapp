@@ -1,0 +1,45 @@
+.sidebar {
+  width: 430px;
+  background-color: #f4f4f4;
+  position: sticky;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.sidebar__title {
+  font-size: 35px;
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 0.32px;
+}
+.sidebar__titlecards {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100vh;
+}
+.sidebar__addfolder {
+  position: sticky;
+  bottom: 30px;
+  left: 280px;
+  background-color: #16008b;
+  color: white;
+  width: 93px;
+  height: 93px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #d9d9d9;
+  border-radius: 5.5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 4.5px;
+}

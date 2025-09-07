@@ -1,0 +1,64 @@
+.createfolder {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  font-weight: 500;
+  letter-spacing: calc(3.5 / 100 * 16px);
+  display: flex;
+  flex-direction: column;
+}
+.createfolder__title {
+  font-size: 29px;
+}
+.groupname,
+.choosecolor,
+.colors {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 15px 0;
+}
+.groupname > label,
+.choosecolor > label {
+  font-size: 27px;
+}
+.groupname > input {
+  font-size: 23px;
+  font-weight: 400;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 22px;
+  padding: 5px 20px;
+}
+.groupname > input::placeholder {
+  font-weight: 400;
+  color: #979797;
+  font-size: 23px;
+}
+.choosecolor {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.colors {
+  display: flex;
+  gap: 5px;
+}
+.color__palette {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.create-btn {
+  background-color: #001f8b;
+  color: white;
+  border: none;
+  font-weight: 400;
+  padding: 10px 35px;
+  font-size: 20px;
+  border-radius: 11px;
+  cursor: pointer;
+  align-self: flex-end;
+  letter-spacing: calc(3.5 / 100 * 16px);
+}
