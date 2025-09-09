@@ -4,6 +4,7 @@
   position: sticky;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   position: relative;
+  width: 25%;
 }
 .sidebar__title {
   font-size: 35px;
@@ -22,7 +23,7 @@
 .sidebar__addfolder {
   position: sticky;
   bottom: 30px;
-  left: 280px;
+  left: 200px;
   background-color: #16008b;
   color: white;
   width: 93px;

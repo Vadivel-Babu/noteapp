@@ -2,8 +2,9 @@
   background-color: #dae5f5;
   width: 100%;
   padding: 20px;
-  min-height: 50%;
-  scroll-behavior: auto;
+  flex-grow: 0.6;
+  overflow-y: auto;
+  flex-grow: 1;
 }
 .notedetail__card {
   background-color: white;

@@ -6,14 +6,14 @@ import { handleModal } from "../../slice/noteSlice";
 
 const SideBar = () => {
   const dispatch = useDispatch();
+  const arr = ["Work", "Personal", "ToDo", "Ideas"];
   return (
     <div className="sidebar">
       <h1 className="sidebar__title">Pocket Notes</h1>
       <div className="sidebar__titlecards">
-        <TitleCard />
-        <TitleCard />
-        <TitleCard />
-        <TitleCard />
+        {arr.map((item, index) => (
+          <TitleCard name={item} key={index} />
+        ))}
       </div>
       <button
         className="sidebar__addfolder"
