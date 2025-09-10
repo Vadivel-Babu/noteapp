@@ -3,6 +3,7 @@ import "./Sidebar.css";
 import add from "../../assets/add.svg";
 import { useDispatch } from "react-redux";
 import { handleModal } from "../../slice/noteSlice";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,12 @@ const SideBar = () => {
       <h1 className="sidebar__title">Pocket Notes</h1>
       <div className="sidebar__titlecards">
         {arr.map((item, index) => (
-          <TitleCard name={item} key={index} />
+          <Link
+            to={`/${item}`}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <TitleCard name={item} key={index} />
+          </Link>
         ))}
       </div>
       <button
