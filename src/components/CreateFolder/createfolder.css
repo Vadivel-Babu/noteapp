@@ -62,3 +62,22 @@
   align-self: flex-end;
   letter-spacing: calc(3.5 / 100 * 16px);
 }
+@media (max-width: 720px) {
+  .createfolder__title {
+    font-size: 18px;
+  }
+  .groupname > label,
+  .choosecolor > label {
+    font-size: 14px;
+  }
+  .groupname > input::placeholder {
+    font-size: 10px;
+  }
+  .color__palette {
+    width: 17px;
+    height: 17px;
+  }
+  .create-btn {
+    font-size: 17px;
+  }
+}

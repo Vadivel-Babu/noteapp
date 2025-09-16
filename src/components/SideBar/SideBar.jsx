@@ -7,13 +7,14 @@ import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const dispatch = useDispatch();
-  const arr = ["Work", "Personal", "ToDo", "Ideas"];
+  const arr = ["Work", "Personal", "ToDo", "Ideas", "Random"];
   return (
     <div className="sidebar">
       <h1 className="sidebar__title">Pocket Notes</h1>
       <div className="sidebar__titlecards">
         {arr.map((item, index) => (
           <Link
+            key={index}
             to={`/${item}`}
             style={{ textDecoration: "none", color: "black" }}
           >
@@ -25,7 +26,7 @@ const SideBar = () => {
         className="sidebar__addfolder"
         onClick={() => dispatch(handleModal(true))}
       >
-        <img src={add} alt="add" />
+        <img src={add} alt="add" className="btn-img" />
       </button>
     </div>
   );

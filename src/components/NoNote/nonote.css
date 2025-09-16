@@ -1,0 +1,35 @@
+.nonote {
+  width: 75%;
+  height: 100vh;
+  background-color: #dae5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dae5f5;
+  gap: 20px;
+  height: max-content;
+}
+.nonote__title {
+  font-size: 50px;
+  font-weight: bold;
+}
+.nonote__img {
+  max-width: 626px;
+  max-height: 313px;
+}
+.note__description {
+  font-size: 22px;
+  font-weight: 500;
+  color: #292929;
+  max-width: 650px;
+}
+.footer {
+  justify-self: flex-end;
+}

@@ -9,7 +9,9 @@ const NoteDetails = () => {
           quod, quia, voluptatum, voluptate quibusdam voluptates quibusdam
           voluptatibus quae quas quidem. Quisquam, quod, quia, voluptatum,
         </p>
-        <p className="time">9 Mar 2023 . 10:10 AM</p>
+        <p className="time">
+          9 Mar 2023 <span className="dot"></span> 10:10 AM
+        </p>
       </div>
     </div>
   );

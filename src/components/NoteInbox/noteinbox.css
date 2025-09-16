@@ -3,7 +3,7 @@
   padding: 20px;
   height: max-content;
 }
-.container {
+.noteinbox__container {
   margin: 0 auto;
   background-color: #ffffff;
   padding: 10px;
@@ -26,4 +26,15 @@ textarea {
 }
 .send__btn {
   align-self: flex-end;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+@media (max-width: 720px) {
+  textarea {
+    font-size: 17px;
+  }
+  .send__btn img {
+    width: 21px;
+  }
 }

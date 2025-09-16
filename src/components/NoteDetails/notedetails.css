@@ -25,4 +25,20 @@
   align-self: flex-end;
   letter-spacing: calc(2 / 100 * 16);
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: #353535;
+  border-radius: 50%;
+  display: inline-block;
+}
+@media (max-width: 720px) {
+  .note,
+  .time {
+    font-size: 13px;
+  }
 }

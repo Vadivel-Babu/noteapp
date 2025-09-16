@@ -23,7 +23,8 @@
 .sidebar__addfolder {
   position: sticky;
   bottom: 30px;
-  left: 200px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #16008b;
   color: white;
   width: 93px;
@@ -43,4 +44,24 @@
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
   border-radius: 4.5px;
+}
+@media (max-width: 720px) {
+  .sidebar {
+    width: 100%;
+    display: block;
+  }
+  .sidebar__title {
+    font-size: 32px;
+  }
+  .sidebar__addfolder {
+    left: 95%;
+    transform: translateX(-50%);
+    background-color: #16008b;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+  .btn-img {
+    width: 40%;
+  }
 }
