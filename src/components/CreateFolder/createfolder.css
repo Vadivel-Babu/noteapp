@@ -63,8 +63,19 @@
   letter-spacing: calc(3.5 / 100 * 16px);
 }
 @media (max-width: 720px) {
+  .createfolder {
+    justify-content: center;
+  }
   .createfolder__title {
     font-size: 18px;
+  }
+  .groupname,
+  .choosecolor,
+  .colors {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
   }
   .groupname > label,
   .choosecolor > label {
@@ -79,5 +90,15 @@
   }
   .create-btn {
     font-size: 17px;
+    align-self: center;
+    padding: 10px 55px;
+  }
+  .groupname > input {
+    font-size: 10px;
+    font-weight: 400;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 22px;
+    padding: 5px 20px;
   }
 }
