@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./createfolder.css";
+import { useDispatch } from "react-redux";
+import { handleCreateNoteFolder } from "../../slice/noteSlice";
+import { handleModal } from "../../slice/noteSlice";
 const CreateFolder = () => {
   const [title, setTitle] = useState("");
   const [color, setColor] = useState("");
+  const dispatch = useDispatch();
+
   const colors = [
     "#B38BFA",
     "#FF79F2",
@@ -41,7 +46,15 @@ const CreateFolder = () => {
       <button
         className="create-btn"
         onClick={() => {
-          console.log({ id: uuidv4().slice(0, 10), title, color });
+          dispatch(
+            handleCreateNoteFolder({
+              id: uuidv4().slice(0, 10),
+              title,
+              color,
+              notes: [],
+            })
+          );
+          dispatch(handleModal(false));
         }}
       >
         Create

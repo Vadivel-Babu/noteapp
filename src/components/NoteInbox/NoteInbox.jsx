@@ -4,6 +4,7 @@ import activebtn from "../../assets/activebtn.svg";
 import disablebtn from "../../assets/disabledbtn.svg";
 const NoteInbox = () => {
   const [note, setNote] = useState("");
+
   return (
     <div className="noteinbox">
       <div className="noteinbox__container">
@@ -20,7 +21,7 @@ const NoteInbox = () => {
           }}
           className="send__btn"
         >
-          <img src={note.length ? activebtn : disablebtn} alt="btn" srcset="" />
+          <img src={note.length ? activebtn : disablebtn} alt="btn" />
         </button>
       </div>
     </div>

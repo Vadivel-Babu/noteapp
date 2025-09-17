@@ -22,7 +22,7 @@ function App() {
         {pathname[1].length ? (
           <Routes>
             <Route
-              path={"/:name"}
+              path={"/:name/:id"}
               exact
               element={
                 <div className="app__noteSection">
@@ -41,7 +41,7 @@ function App() {
         <Routes>
           <Route path={"/"} exact element={<SideBar />} />
           <Route
-            path={"/:name"}
+            path={"/:name/:id"}
             exact
             element={
               <div className="app__noteSection">

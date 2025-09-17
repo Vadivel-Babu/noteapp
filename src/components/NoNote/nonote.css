@@ -5,24 +5,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 100px;
+  gap: calc(100vh - 85vh);
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #dae5f5;
   gap: 20px;
   height: max-content;
+  max-width: 75%;
+}
+.img__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .nonote__title {
   font-size: 50px;
   font-weight: bold;
 }
 .nonote__img {
-  max-width: 626px;
-  max-height: 313px;
+  /* max-width: 626px; */
+  min-width: 100%;
 }
 .note__description {
   font-size: 22px;
@@ -31,5 +37,9 @@
   max-width: 650px;
 }
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   justify-self: flex-end;
+  gap: 10px;
 }

@@ -1,17 +1,29 @@
 import { useLocation } from "react-router-dom";
 import "./noteheader.css";
 import backBtn from "../../assets/back.svg";
+import { useSelector } from "react-redux";
 const NoteHeader = () => {
   const location = useLocation();
-  let pathName = location.pathname.split("/")[1];
+  let pathName = location.pathname.split("/");
+  const { folders } = useSelector((state) => state.note);
+  const currentFolder = folders.find((item) => item.id === pathName[2]);
+  const folderName = currentFolder?.title.split(" ");
+  console.log(currentFolder);
 
   return (
     <div className="noteheader">
       <button className="btn back-btn" onClick={() => window.history.back()}>
         <img src={backBtn} alt="back" />
       </button>
-      <div className="noteheader__profile">{pathName[0].toUpperCase()}</div>
-      <div className="noteheader__name"> {pathName}</div>
+      <div
+        className="noteheader__profile"
+        style={{ backgroundColor: currentFolder?.color }}
+      >
+        {" "}
+        {folderName[0][0].toUpperCase()}{" "}
+        {folderName[1] ? folderName[1][0]?.toUpperCase() : ""}
+      </div>
+      <div className="noteheader__name"> {currentFolder?.title}</div>
     </div>
   );
 };

@@ -1,24 +1,25 @@
 import TitleCard from "../TitleCard/TitleCard";
 import "./Sidebar.css";
 import add from "../../assets/add.svg";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { handleModal } from "../../slice/noteSlice";
 import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const dispatch = useDispatch();
-  const arr = ["Work", "Personal", "ToDo", "Ideas", "Random"];
+  const { folders } = useSelector((state) => state.note);
+
   return (
     <div className="sidebar">
       <h1 className="sidebar__title">Pocket Notes</h1>
       <div className="sidebar__titlecards">
-        {arr.map((item, index) => (
+        {folders.map((item, index) => (
           <Link
-            key={index}
-            to={`/${item}`}
+            key={item.id}
+            to={`/${item.title}/${item.id}`}
             style={{ textDecoration: "none", color: "black" }}
           >
-            <TitleCard name={item} key={index} />
+            <TitleCard folder={item} key={index} />
           </Link>
         ))}
       </div>
