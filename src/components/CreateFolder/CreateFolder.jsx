@@ -4,6 +4,7 @@ import "./createfolder.css";
 import { useDispatch } from "react-redux";
 import { handleCreateNoteFolder } from "../../slice/noteSlice";
 import { handleModal } from "../../slice/noteSlice";
+import { toast } from "react-toastify";
 const CreateFolder = () => {
   const [title, setTitle] = useState("");
   const [color, setColor] = useState("");
@@ -17,6 +18,25 @@ const CreateFolder = () => {
     "#0047FF",
     "#6691FF",
   ];
+  const handleCreateFolder = () => {
+    if (!title.length || title.length < 2) {
+      toast.error("Please enter group name");
+      return;
+    }
+    if (!color.length) {
+      toast.error("Please select color");
+      return;
+    }
+    dispatch(
+      handleCreateNoteFolder({
+        id: uuidv4().slice(0, 10),
+        title,
+        color,
+        notes: [],
+      })
+    );
+    dispatch(handleModal(false));
+  };
 
   return (
     <div className="createfolder">
@@ -43,20 +63,7 @@ const CreateFolder = () => {
           ))}
         </div>
       </div>
-      <button
-        className="create-btn"
-        onClick={() => {
-          dispatch(
-            handleCreateNoteFolder({
-              id: uuidv4().slice(0, 10),
-              title,
-              color,
-              notes: [],
-            })
-          );
-          dispatch(handleModal(false));
-        }}
-      >
+      <button className="create-btn" onClick={handleCreateFolder}>
         Create
       </button>
     </div>

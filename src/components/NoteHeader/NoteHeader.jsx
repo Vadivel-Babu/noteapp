@@ -8,7 +8,6 @@ const NoteHeader = () => {
   const { folders } = useSelector((state) => state.note);
   const currentFolder = folders.find((item) => item.id === pathName[2]);
   const folderName = currentFolder?.title.split(" ");
-  console.log(currentFolder);
 
   return (
     <div className="noteheader">

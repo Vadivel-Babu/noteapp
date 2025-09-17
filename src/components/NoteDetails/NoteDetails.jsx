@@ -1,6 +1,14 @@
 import "./notedetails.css";
+import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 const NoteDetails = () => {
+  const { folders } = useSelector((state) => state.note);
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  const currentFolder = folders.find((item) => item.id === id);
+  console.log(currentFolder);
+
   return (
     <div className="notedetails">
       <div className="notedetail__card">

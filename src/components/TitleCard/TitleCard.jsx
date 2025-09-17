@@ -2,12 +2,11 @@ import "./titlecard.css";
 import { useLocation } from "react-router-dom";
 const TitleCard = ({ folder }) => {
   const location = useLocation();
-  const pathname = location.pathname.split("/")[2];
+  const id = location.pathname.split("/")[2];
   const folderName = folder.title.split(" ");
-  console.log(folderName, folderName[0], folderName[1]);
 
   return (
-    <div className={`titlecard ${pathname === folder.id ? "active" : ""}`}>
+    <div className={`titlecard ${id === folder.id ? "active" : ""}`}>
       <div
         className="titlecard__profile"
         style={{ backgroundColor: folder.color }}
