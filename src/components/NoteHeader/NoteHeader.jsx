@@ -1,9 +1,10 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./noteheader.css";
 import backBtn from "../../assets/back.svg";
 import { useSelector } from "react-redux";
 const NoteHeader = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   let pathName = location.pathname.split("/");
   const { folders } = useSelector((state) => state.note);
   const currentFolder = folders.find((item) => item.id === pathName[2]);
@@ -11,7 +12,7 @@ const NoteHeader = () => {
 
   return (
     <div className="noteheader">
-      <button className="btn back-btn" onClick={() => window.history.back()}>
+      <button className="btn back-btn" onClick={() => navigate("/")}>
         <img src={backBtn} alt="back" />
       </button>
       <div

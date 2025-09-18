@@ -26,17 +26,12 @@ export const noteSlice = createSlice({
         JSON.stringify(state.folders.map((folder) => folder))
       );
     },
-
+    //add note handler
     handleAddNote: (state, action) => {
-      console.log(action.payload);
-
       const { newNote, folderId } = action.payload;
 
       const getFolder = state.folders.map((folder) => {
         if (folder.id === folderId) {
-          console.log(folderId, folder.id);
-          console.log("matched");
-          //return folder;
           return {
             ...folder,
             notes: [...folder.notes, newNote],

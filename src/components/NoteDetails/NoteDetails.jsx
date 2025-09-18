@@ -7,20 +7,18 @@ const NoteDetails = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const currentFolder = folders.find((item) => item.id === id);
-  console.log(currentFolder);
 
   return (
     <div className="notedetails">
-      <div className="notedetail__card">
-        <p className="note">
-          lore*200m ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-          quod, quia, voluptatum, voluptate quibusdam voluptates quibusdam
-          voluptatibus quae quas quidem. Quisquam, quod, quia, voluptatum,
-        </p>
-        <p className="time">
-          9 Mar 2023 <span className="dot"></span> 10:10 AM
-        </p>
-      </div>
+      {currentFolder.notes.map((note) => (
+        <div className="notedetail__card" key={note.id}>
+          <p className="note">{note.note}</p>
+          <p className="time">
+            {note?.date?.split("and")[0]} <span className="dot"></span>{" "}
+            {note?.date?.split("and")[1]}
+          </p>
+        </div>
+      ))}
     </div>
   );
 };

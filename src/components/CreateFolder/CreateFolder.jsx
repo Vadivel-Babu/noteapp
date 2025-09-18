@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./createfolder.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { handleCreateNoteFolder } from "../../slice/noteSlice";
 import { handleModal } from "../../slice/noteSlice";
 import { toast } from "react-toastify";
@@ -9,6 +9,7 @@ const CreateFolder = () => {
   const [title, setTitle] = useState("");
   const [color, setColor] = useState("");
   const dispatch = useDispatch();
+  const { folders } = useSelector((state) => state.note);
 
   const colors = [
     "#B38BFA",
@@ -19,12 +20,16 @@ const CreateFolder = () => {
     "#6691FF",
   ];
   const handleCreateFolder = () => {
-    if (!title.length || title.length < 2) {
+    if (!title.trim().length || title.trim().length < 2) {
       toast.error("Please enter group name");
       return;
     }
     if (!color.length) {
       toast.error("Please select color");
+      return;
+    }
+    if (folders.find((item) => item.title === title)) {
+      toast.error("Group name already exists");
       return;
     }
     dispatch(

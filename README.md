@@ -1,12 +1,36 @@
-# React + Vite
+# 📒 Notes & Group Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **React + Redux Toolkit** application to create groups, add notes, and persist them using **localStorage**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ **Create Groups** – Users can create groups with a unique name
+- ✅ **Group Name Validation** – Requires at least 2 characters to create a group
+- ✅ **Add Notes** – Add notes inside a group by pressing **Enter**
+- ✅ **Date & Time Stamp** – Each note is stored with a timestamp (e.g., `9 Mar 2023 10:10 AM`)
+- ✅ **Persist Data** – Notes and groups are saved in **localStorage**, so they remain after refresh
+- ✅ **Responsive UI** – Clean and minimal layout
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- **React** – UI
+- **Redux Toolkit** – State Management
+- **localStorage** – Data persistence
+- **CSS** – Styling
+
+---
+
+## 🏗 Installation
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/yourusername/notes-group-app.git
+cd notes-group-app
+npm install
+npm run dev
+```
