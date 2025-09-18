@@ -1,5 +1,5 @@
 import TitleCard from "../TitleCard/TitleCard";
-import "./Sidebar.css";
+import "./SideBar.css";
 import add from "../../assets/add.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { handleModal } from "../../slice/noteSlice";
