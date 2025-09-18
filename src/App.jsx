@@ -1,5 +1,5 @@
 import Modal from "./components/Modal/Modal";
-import SideBar from "./components/Sidebar/Sidebar";
+import SideBar from "./components/SideBar/SideBar";
 import "./app.css";
 import { useSelector } from "react-redux";
 import NoteHeader from "./components/NoteHeader/NoteHeader";
